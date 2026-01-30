@@ -18,6 +18,44 @@ body {
   background-color: var(--dark-color);
   overflow: hidden;
   perspective: 1000px;
+  font-family: 'Arial', sans-serif;
+}
+
+/* Header */
+.header {
+  position: fixed;
+  top: 2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  z-index: 20;
+  animation: fadeInDown 0.8s ease-out;
+}
+
+.header h1 {
+  font-size: 2.5rem;
+  color: #FFB6D9;
+  text-shadow: 0 0 20px #FF69B4, 0 0 40px #FF1493;
+  letter-spacing: 2px;
+  margin-bottom: 0.5rem;
+}
+
+.subtitle {
+  font-size: 1rem;
+  color: #87CEEB;
+  text-shadow: 0 0 10px #00CED1;
+  font-style: italic;
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translate(-50%, -30px);
+  }
+  to {
+    opacity: 1;
+    transform: translate(-50%, 0);
+  }
 }
 
 .night {
@@ -42,6 +80,7 @@ body {
   transform-origin: bottom center;
   z-index: 10;
   --fl-speed: 0.3s;
+  transition: filter 0.3s ease;
 }
 .flower--1 {
   -webkit-animation: moving-flower-1 4s linear infinite;
